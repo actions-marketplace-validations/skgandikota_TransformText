@@ -1,0 +1,57 @@
+name: 'TransformText'
+description: 'Transform text with regex replace, base64 encode/decode, URL encode/decode, case conversion, trim, and more.'
+branding:
+  icon: 'type'
+  color: 'purple'
+
+inputs:
+  text:
+    description: 'The input text to transform.'
+    required: true
+
+  operation:
+    description: 'The transformation to apply: regex_replace, base64_encode, base64_decode, url_encode, url_decode, uppercase, lowercase, trim, substring, split, template, reverse, length, lines, hash_sha256.'
+    required: true
+
+  find:
+    description: 'Regex pattern to find (for regex_replace operation).'
+    required: false
+    default: ''
+
+  replace:
+    description: 'Replacement string (for regex_replace operation). Supports $1, $2 capture groups.'
+    required: false
+    default: ''
+
+  start:
+    description: 'Start index (for substring operation).'
+    required: false
+    default: '0'
+
+  end:
+    description: 'End index (for substring operation). Empty means end of string.'
+    required: false
+    default: ''
+
+  delimiter:
+    description: 'Delimiter (for split operation).'
+    required: false
+    default: ','
+
+  index:
+    description: 'Element index to return (for split operation). Empty returns all as JSON array.'
+    required: false
+    default: ''
+
+  flags:
+    description: 'Regex flags (for regex_replace operation, e.g. "gi").'
+    required: false
+    default: 'g'
+
+outputs:
+  result:
+    description: 'The transformed text.'
+
+runs:
+  using: 'node20'
+  main: 'index.js'

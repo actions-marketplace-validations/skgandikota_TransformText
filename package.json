@@ -1,0 +1,23 @@
+{
+  "name": "transformtext",
+  "version": "1.0.0",
+  "description": "GitHub Action for text transformations: regex, base64, URL encode, case conversion, and more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skgandikota/TransformText.git"
+  },
+  "keywords": ["github-action", "text", "transform", "regex", "base64", "url-encode"],
+  "author": "Saikoushik Gandikota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skgandikota/TransformText/issues"
+  },
+  "homepage": "https://github.com/skgandikota/TransformText#readme",
+  "dependencies": {
+    "@actions/core": "^3.0.0"
+  }
+}
